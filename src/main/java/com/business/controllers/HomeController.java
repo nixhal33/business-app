@@ -14,6 +14,13 @@ import com.business.services.ProductServices;
 @Controller
 public class HomeController 
 {
+	@GetMapping("/")
+	public String root() 
+	{
+    		return "redirect:/home";
+
+	}
+	
 	@Autowired
 	private ProductServices productServices;
 	@GetMapping("/home")
